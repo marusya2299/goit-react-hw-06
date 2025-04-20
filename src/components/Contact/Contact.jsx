@@ -1,7 +1,7 @@
 import { User, Phone } from "lucide-react";
 import css from "../Contact/Contact.module.css";
 
-export default function Contact({data:{id, name, number}, onDelete}){
+export default function Contact({data:{id, name, number}, handleDelete}){
     return(
         <div className={css.box}>
             <div className={css.boxData}>
@@ -15,7 +15,7 @@ export default function Contact({data:{id, name, number}, onDelete}){
                 </div>
             </div>
            
-            <button className={css.button} onClick={() => onDelete(id)}>Delete</button>
+            <button className={css.button} onClick={() => handleDelete(id)}>Delete</button>
         </div>
     )
 }
